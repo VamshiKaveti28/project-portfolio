@@ -2,6 +2,12 @@ import React from "react";
 import SectionWrapper from "../components/SectionWrapper";
 
 const Hero = () => {
+ const handleDownload = () => {
+      const link = document.createElement("a");
+      link.href = "public/VamshiKavetiSoftwareDeveloper.pdf"; // path to resume in public folder
+      //link.download = "Vamshi_Kaveti_Resume.pdf"; // optional: rename on download
+      link.click();
+    };
   return (
     <section
       id="home"
@@ -25,7 +31,7 @@ const Hero = () => {
             >
               See More
             </a>
-            <button className="bg-black text-xl  border-2 border-white rounded-4xl text-white p-4 hover:scale-130 transition-transform">
+            <button onClick={handleDownload} className="bg-black text-xl  border-2 border-white rounded-4xl text-white p-4 hover:scale-130 transition-transform cursor-pointer">
               Resume
             </button>
           </div>

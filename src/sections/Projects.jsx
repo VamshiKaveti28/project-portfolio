@@ -3,20 +3,20 @@ import SectionWrapper from "../components/SectionWrapper";
 
 const projects = [
   {
-    title: "MyChart Replica",
+    title: "Food Delivery Application",
     description:
-      "A full-featured healthcare portal allowing patients to book appointments, view health records, and find nearby hospitals. Built with React, Node.js, MongoDB, and Tailwind CSS.",
-    tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    demoLink: "#", // Replace with actual URL
-    codeLink: "#", // Replace with GitHub repo
+      "Developed a backend-centric food delivery application emphasizing robust API design, order management, user authentication, and real-time delivery status tracking.",
+    tech: ["Java", "Springboot", "Postgresql", "Postman"],
+    demoLink: "", // Replace with actual URL
+    codeLink: "https://github.com/VamshiKaveti28/FoodDeliveryApp", // Replace with GitHub repo
   },
   {
-    title: "E-Commerce Dashboard",
+    title: "StudyNest",
     description:
-      "Admin dashboard for managing product inventory, orders, and user analytics. Integrated charts and data visualization with Recharts and Context API.",
-    tech: ["React", "Chart.js", "Tailwind CSS", "Firebase"],
+      "Built StudyNest, a full-stack MERN application that helps students explore beginner to advanced projects, with user authentication, certificate generation, instructor dashboards, and a review system.",
+    tech: ["React", "Javascript", "Tailwind CSS", "Firebase","Nodejs","ExpressJs"],
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/VamshiKaveti28/StudyNest",
   },
   {
     title: "Developer Portfolio",
@@ -24,7 +24,7 @@ const projects = [
       "Responsive personal portfolio website built with Vite, React, and Tailwind CSS. Includes smooth scroll, mobile nav, and sectioned layout.",
     tech: ["React", "Vite", "Tailwind CSS"],
     demoLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/VamshiKaveti28/project-portfolio",
   },
 ];
 
@@ -62,13 +62,13 @@ const Projects = () => {
                 ))}
               </div>
               <div className="flex space-x-4">
-                <a
+                {/* <a
                   href={project.demoLink}
                   target="_blank"
                   className="text-sm text-white bg-blue-600 px-4 py-1 rounded hover:bg-blue-700 transition"
                 >
                   Demo
-                </a>
+                </a> */}
                 <a
                   href={project.codeLink}
                   target="_blank"

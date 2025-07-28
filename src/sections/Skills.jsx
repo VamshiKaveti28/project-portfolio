@@ -7,14 +7,17 @@ const skills = {
     { name: "JavaScript", icon: "javascript" },
     { name: "React", icon: "react" },
     { name: "Tailwind CSS", icon: "tailwindcss" },
-    
+    { name: "Redux", icon: "redux" },
   ],
   backend: [
     { name: "Node.js", icon: "nodejs" },
     { name: "Express.js", icon: "express" },
     { name: "MongoDB", icon: "mongodb" },
-    { name: "REST APIs", icon: "postman" },
-    
+    { name: "REST APIs", icon: "" },
+    { name: "Java", icon: "java" },
+    { name: "Springboot", icon: "spring" },
+    { name: "Postgresql", icon: "postgresql" },
+    { name: "Hibernate", icon: "hibernate" },
   ],
   tools: [
     { name: "Git", icon: "git" },
@@ -22,18 +25,23 @@ const skills = {
     { name: "Vite", icon: "vite" },
     { name: "VS Code", icon: "vscode" },
     { name: "Figma", icon: "figma" },
-    {name:"Docker",icon:"docker"}
+    { name: "Docker", icon: "docker" },
+    { name: "aws", icon: "aws" },
+    { name: "Jenkins", icon: "jenkins" },
+    //{ name: "Jira", icon: "jira" },
+    { name: "Postman", icon: "postman" },
   ],
 };
 
 const Skills = () => {
   return (
-    <section id="skills" className=" min-h-screen bg-black text-white py-16 px-6">
+    <section
+      id="skills"
+      className=" min-h-screen bg-black text-white py-16 px-6"
+    >
       {/* Header */}
-      <div className="max-w-6xl mx-auto text-center mb-16">
-        <h2 className="text-4xl font-bold text-">
-          Skills & Technologies
-        </h2>
+      <div className="max-w-6xl mx-auto text-center mb-16 mt-12">
+        <h2 className="text-4xl font-bold text-">Skills & Technologies</h2>
       </div>
 
       {/* Sections */}
@@ -41,19 +49,32 @@ const Skills = () => {
         {/* Section Component */}
         {[
           { title: "Frontend", color: "text-white", data: skills.frontend },
-          { title: "Backend", color: "text-white", data: skills.backend },
-          { title: "Tools & Platforms", color: "text-white", data: skills.tools },
+          {
+            title: "Backend and Database",
+            color: "text-white",
+            data: skills.backend,
+          },
+          {
+            title: "Tools & Platforms",
+            color: "text-white",
+            data: skills.tools,
+          },
         ].map((section) => (
-          <div key={section.title} className="flex flex-col  gap-12 md:flex-row items-start md:items-center ">
+          <div
+            key={section.title}
+            className="flex flex-col  gap-12 md:flex-row items-start md:items-center "
+          >
             {/* Left: Section Title */}
             <div className="md:w-1/4 mb-4 md:mb-0">
-              <h3 className={`text-4xl hover:scale-180 transition-transform font-semibold ${section.color}`}>
+              <h3
+                className={`text-4xl hover:scale-180 transition-transform font-semibold ${section.color}`}
+              >
                 {section.title}
               </h3>
             </div>
 
             {/* Right: Skill Icons */}
-            <div className="md:w-3/4  flex flex-wrap gap-9">
+            <div className="md:w-3/4  flex flex-wrap gap-8">
               {section.data.map((skill) => (
                 <div
                   key={skill.name}

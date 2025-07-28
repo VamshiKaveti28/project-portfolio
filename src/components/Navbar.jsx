@@ -10,8 +10,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50 p-">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold text-blue-600 ">
+        <a href="#" className="flex gap-2 text-xl font-bold text-blue-600 ">
           <img className="w-12" src={profile} alt="" />
+          
         </a>
 
         {/* Desktop Menu */}
